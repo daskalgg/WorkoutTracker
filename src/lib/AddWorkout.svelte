@@ -4,9 +4,8 @@
     $: if (dialog && showModal) dialog.showModal();
 </script>
 
-<div 
->
-    <button on:click={() => {showModal = true}} >Add Exercise</button>
+<div>
+    <button class="button" on:click={() => {showModal = true}} >Add Exercise</button>
     {#if showModal}
     <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
     <dialog 
@@ -61,4 +60,10 @@
 	button {
 		display: block;
 	}
+
+    .button {
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+    }
 </style>
