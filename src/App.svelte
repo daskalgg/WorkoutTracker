@@ -1,12 +1,14 @@
 <script lang="ts">
     import Header from "./lib/Header.svelte";
     import AddWorkout from "./lib/AddWorkout.svelte";
+    import TestStore from "./lib/TestStore.svelte";
 
 </script>
 
 <main>
   <Header></Header>
   <AddWorkout></AddWorkout>
+  <TestStore></TestStore>
 </main>
 
 <style>
