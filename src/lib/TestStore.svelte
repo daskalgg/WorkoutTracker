@@ -1,15 +1,11 @@
 <script lang="ts">
-    import { persisted } from "svelte-persisted-store";
-    import {get} from 'svelte/store'
-    const store = persisted("test", new Array<string>())
+    import { sql } from "@vercel/postgres"
 
     let newTodo = "";
-    let todos = Array<string>;
-    store.subscribe((t) => todos = t)
+    let todos = ["Hello"];
 
-    function updateStore() {
-    store.update(todos => [...get(store), newTodo])
-    newTodo = ""
+    async function updateStore() {
+       await sql`insert into Todo (message) value (${newTodo})`;
     }
 </script>
 <div>

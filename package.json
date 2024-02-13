@@ -19,6 +19,7 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.7.2",
     "svelte-persisted-store": "^0.9.0",
     "svelte-routing": "^2.11.0"
   }
